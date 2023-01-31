@@ -1,17 +1,37 @@
 <html>
-    <form>
-        <p>Firstname: </p><input type="text">
-        <p>Name: </p><input type="text">
-        <p>Age: </p><input type="number">
-        <p>Phone: </p><input type="tel">
-        <p>Email: </p><input type="email">
-        <p>Student at 42? </p><input type="checkbox">
-        <p>Gender: </p><input type="radio">
-        <label>Male</label>
-        <input type="radio">
-        <label>Famale</label>
-        <input type="radio">
-        <label>Other</label> //errado, precisa dos label
-        //botao de enviar
-    </form>
+    <head>
+        <script type="text/javascript" src="popup.js"></script>
+        <title>Form</title>
+    </head>
+    <body>
+        <form>
+            <label for="firstname">Firstname: </label>
+            <input type="text" id="firstname" name="firstname"><br><br>
+            
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="age">Age: </label>
+            <input type="number" id="age" name="age"><br><br>
+            
+            <label for="phone">Phone: </label>
+            <input type="tel" id="phone" name="phone"><br><br>
+            
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <label for="student">Student at 42? </p>
+            <input type="checkbox" id="student" name="student"><br><br>
+            
+            <p>Gender: </p>
+            <input type="radio" id="gender_male" name="gender" value="Male">
+            <label for="gender_male">Male</label>
+            <input type="radio" id="gender_female" name="gender" value="Female">
+            <label for="gender_female">Female</label>
+            <input type="radio" id="gender_other" name="gender" value="Other">
+            <label for="gender_other">Other</label><br><br>
+            
+            <input type="submit" onclick="displayFormContents()" value="Display">
+        </form>
+    </body>
 </html>
