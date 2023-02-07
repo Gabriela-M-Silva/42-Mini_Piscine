@@ -6,7 +6,7 @@ def	test_errors():
 		print('Error. Invalid number of arguments')
 		exit ()
 	if os.path.isfile(sys.argv[1]) == False:
-		print("Error. Template file doesn't exist")
+		print("Error. File doesn't exist")
 		exit ()
 	if os.path.isfile('settings.py') == False:
 		print("Error. Settings file doesn't exist")
