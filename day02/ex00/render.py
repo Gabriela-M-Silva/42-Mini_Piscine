@@ -22,35 +22,26 @@ def	test_errors():
 	return name_html
 
 def	set_template_values(content_t, dic):
-	new_content = list()
-	
-# replace infos in template
-#	for y in dic:
-#		for x in content_t:
-#			new_content.append(x.replace('{' + y + '}', dic[1]))
-		#	new_content.append()
-#		print(y)
-	# tem q testar se tem tds as variaveis
-	return new_content
-
-	#content_t = content_t.replace()
+	new_content = content_t
+	# replace infos in template
+	for y in dic:
+		new_content = new_content.replace('{' + y + '}', dic[y])
+	return new_content.strip('\n')
 
 def	write_html_file(file_html, content_t, dic):
 	# set values in variables
 	content_t = set_template_values(content_t, dic)
-	# write lines in html
-	for x in content_t:
-		if x != '':
-			file_html.write(f'''{x}
+	# write new content in html
+	file_html.write(f'''{content_t}
 '''
-			)
+	)
 
 def	render():
 	# test errors and return name_html if is ok
 	name_html = test_errors()
 	# open file and save content
 	template = open(sys.argv[1], 'r')
-	content_t = template.read().split('\n')
+	content_t = template.read()
 	# read and save settings
 	settings = open('settings.py', 'r')
 	content_s = settings.read().split('\n')
