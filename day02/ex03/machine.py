@@ -20,26 +20,27 @@ class CoffeeMachine:
 			raise Exception("We don't have that on the drinks list")
 		if self.count == 10:
 			print(CoffeeMachine.BrokenMachineException()) #printa q quebrou
-			self.repair()
+			return 
 		else:
 			self.count += 1
-			
-
-			sended_drink = random.choice(sended_drink 
-			print(self.count) #serve random drink
-		#classe()
+			list_drink = [drink(), CoffeeMachine.EmptyCup()]
+			sended_drink = random.choice(list_drink)
+			#print(self.count) #serve random drink
+			return sended_drink
 		
 def machine():
 	tr = CoffeeMachine() #p teste -- isso vai estar no serve()
-	var_random = random.choice(lista de classes) #pseudo-codigo
+	var_random = random.choice([Coffee, Tea, Chocolate, Cappuccino]) #tem hotbeverage?
 
 #	print(tr.EmptyCup())
 	i = 0
 	while (i <= 21): #break AFTER serving 10 drinks
 		try:
-			tr.serve(var_random)
+			print(tr.serve(var_random), '\n')  #ta enviando None em algum momento
 		except Exception as ex:
 			print(ex)
+		if i % 10 == 0: #errado
+			tr.repair()
 		i += 1
 
 if __name__ == '__main__':
