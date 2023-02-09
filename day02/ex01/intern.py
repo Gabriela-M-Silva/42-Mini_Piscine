@@ -17,19 +17,19 @@ class Intern:
 		return self.Coffee()
 
 def test_intern():
-	ful = Intern() 
-	cic = Intern('Mark')
+	intern1 = Intern() 
+	intern2 = Intern('Mark')
 
 	print('Whats your name?')
-	print(ful)
-	print('My name is', cic, '\n')
+	print(intern1)
+	print('My name is', intern2, '\n')
 	print('Coffe hour:')
-	print(cic, 'make coffee...\nResult:', cic.make_coffee(), '\n')
+	print(intern2, 'make coffee...\nResult:', intern2.make_coffee(), '\n')
 	print('Work hour:')
 	try:
-		print(ful.work())
-	except:
-		print('Work is Intern error. :D')
+		print(intern1.work())
+	except Exception as ex:
+		print(ex)
 
 if __name__ == '__main__':
 	test_intern()
