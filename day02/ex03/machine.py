@@ -28,11 +28,11 @@ class CoffeeMachine:
 
 def machine():
 	machine = CoffeeMachine()
-	random_drink = random.choice([Coffee, Tea, Chocolate, Cappuccino])
 
 	i = 0
 	count = 1
 	while (i <= 21): #break AFTER serving 10 drinks
+		random_drink = random.choice([Coffee, Tea, Chocolate, Cappuccino])
 		try:
 			print(machine.serve(random_drink), '\n')
 		except Exception as ex:
